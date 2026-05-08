@@ -11,7 +11,11 @@
   },
   "module": "./dist/status-indicator.js",
   "exports": {
-    ".": "./dist/status-indicator.js"
+    ".": {
+      "default": "./dist/status-indicator.js",
+      "import": "./dist/status-indicator.js",
+      "require": "./dist/status-indicator.umd.cjs"
+    }
   },
   "files": [
     "dist",
