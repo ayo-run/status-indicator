@@ -2,7 +2,7 @@
 
 Circles with colors. That's it. That's the component.
 
-## Quick Start
+## Quick Start using a CDN
 
 Copy the following to your HTML page:
 
@@ -11,7 +11,9 @@ Copy the following to your HTML page:
 <status-indicator status="positive">All systems operational</status-indicator>
 ```
 
-## Installation
+## Installation via NPM
+
+If you want to install the library as a node module, you can install the [published package](https://npmx.dev/@ayo-run/status-indicator) via NPM:
 
 ```bash
 # using npm
