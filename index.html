@@ -7,6 +7,24 @@
     <script type="module" src="./src/status-indicator.ts"></script>
 </head>
 <body>
-    <status-indicator>All systems operational</status-indicator>
+    <status-indicator status="positive">
+        All systems operational
+    </status-indicator>
+    <br />
+    <status-indicator status="negative">
+        Something's wrong
+    </status-indicator>
+    <br />
+    <status-indicator status="active">
+        It's just fine; carry on
+    </status-indicator>
+    <br />
+    <status-indicator>
+        Nothing matters
+    </status-indicator>
+    <br />
+    <status-indicator status="intermediary">
+        Slow down...
+    </status-indicator>
 </body>
 </html>
