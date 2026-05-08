@@ -2,7 +2,6 @@
 
 Circles with colors. That's it. That's the component.
 
-![screenshot](./screenshot.png)
 
 ## Usage
 
@@ -25,6 +24,10 @@ Set the `status` property of the `status-indicator` component to any of the foll
     Slow down...
 </status-indicator>
 ```
+
+### Result
+
+![screenshot](./screenshot.png)
 
 ---
 
