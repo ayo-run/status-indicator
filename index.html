@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>status-indicator web component demo</title>
+    <link rel="stylesheet" href="./pico.min.css">
     <script type="module" src="./src/status-indicator.ts"></script>
     <style>
+        html, body {
+            height: 100%
+        }
+        body {
+            display: grid;
+            place-content: safe center;
+        }
         main {
             padding: 1em;
+        }
+
+        status-indicator {
+            font-family: 'Courier New', Courier, monospace;
         }
     </style>
 </head>
