@@ -37,7 +37,7 @@ To indicate the status that determines the color of the circle, set the `status`
 <status-indicator> Nothing matters </status-indicator>
 ```
 
-### `pulse` animation
+### 2. `pulse` animation
 
 You can add the `pulse` attribute to make the circle... pulse
 
