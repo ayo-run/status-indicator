@@ -28,6 +28,8 @@ class StatusIndicator extends WebComponent {
     }
 
     get template(): any {
+        const statusColor = this.#indicatorColor[this.props.status]
+
         return html`
             <div class="status-indicator-icon" style=${{
                 display: 'inline-block',
@@ -35,7 +37,7 @@ class StatusIndicator extends WebComponent {
                 cursor: 'pointer',
                 width: '10px',
                 height: '10px',
-                backgroundColor: `rgba(${this.#indicatorColor[this.props.status]})`,
+                backgroundColor: `rgb(${statusColor})`,
                 marginRight: '0.05rem',
                 ...(this.props.pulse ? this.#pulseAnimationCSSRules : [])
             }}> </div>
@@ -47,9 +49,9 @@ class StatusIndicator extends WebComponent {
             this.props.pulse ? html`
                 <style>
                 @keyframes pulse {
-                    0% { box-shadow: 0 0 0 0 rgba(${this.#indicatorColor[this.props.status]}, 0.5);}
-                    70% { box-shadow: 0 0 0 10px rgba(${this.#indicatorColor[this.props.status]}, 0); }
-                    100% { box-shadow: 0 0 0 0 rgba(${this.#indicatorColor[this.props.status]}, 0); }
+                    0% { box-shadow: 0 0 0 0 rgba(${statusColor}, 0.5);}
+                    70% { box-shadow: 0 0 0 10px rgba(${statusColor}, 0); }
+                    100% { box-shadow: 0 0 0 0 rgba(${statusColor}, 0); }
                 }
                 </style>`
                 :
