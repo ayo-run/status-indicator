@@ -50,7 +50,7 @@ You can add the `pulse` attribute to make the circle... pulse
 </status-indicator>
 ```
 
-### Result
+## Result
 
 ![screenshot](./screenshot.png)
 
