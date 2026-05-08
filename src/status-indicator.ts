@@ -44,7 +44,7 @@ class StatusIndicator extends WebComponent {
 
             ${
             /** if pulse is set, add animation keyframes */
-            this.props.pulse && html`
+            this.props.pulse ? html`
                 <style>
                 @keyframes pulse {
                     0% { box-shadow: 0 0 0 0 rgba(${this.#indicatorColor[this.props.status]}, 0.5);}
@@ -52,6 +52,8 @@ class StatusIndicator extends WebComponent {
                     100% { box-shadow: 0 0 0 0 rgba(${this.#indicatorColor[this.props.status]}, 0); }
                 }
                 </style>`
+                :
+                ''
             }`
     }
 }
