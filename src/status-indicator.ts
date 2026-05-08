@@ -34,3 +34,5 @@ class StatusIndicator extends WebComponent {
 }
 
 customElements.define('status-indicator', StatusIndicator)
+
+export default StatusIndicator
