@@ -1,9 +1,12 @@
 import { WebComponent, html } from 'web-component-base'
+import stylesheet from './stylesheets'
+
+console.log(stylesheet.cssRules)
 
 class StatusIndicator extends WebComponent {
     get template(): any {
         return html`
-            <h1>Hello, World!</h1>
+            <slot></slot>
         `
     }
 }
