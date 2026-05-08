@@ -19,8 +19,7 @@ class StatusIndicator extends WebComponent {
 
     get template(): any {
         return html`
-            <div
-                style=${{
+            <div style=${{
                 display: 'inline-block',
                 borderRadius: '50%',
                 cursor: 'pointer',
