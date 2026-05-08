@@ -1,0 +1,21 @@
+{
+  "name": "web-component-template",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Project scaffolding for a new web component",
+  "license": "ISC",
+  "author": "Ayo Ayco",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Warning: no test specified\"",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "eslint": "^10.2.1",
+    "vite": "^8.0.9"
+  },
+  "dependencies": {
+    "web-component-base": "^4.1.1"
+  }
+}
