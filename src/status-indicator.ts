@@ -19,16 +19,19 @@ class StatusIndicator extends WebComponent {
 
     get template(): any {
         return html`
-            <div style=${{
+            <div class="status-indicator-icon" style=${{
                 display: 'inline-block',
                 borderRadius: '50%',
                 cursor: 'pointer',
                 width: '10px',
                 height: '10px',
-                backgroundColor: `rgba(${this.#indicatorColor[this.props.status]})`
+                backgroundColor: `rgba(${this.#indicatorColor[this.props.status]})`,
+                marginRight: '0.05rem'
             }}
             ></div>
-            <slot></slot>
+            <span class="status-indicator-label">
+                <slot></slot>
+            </span>
         `
     }
 }
