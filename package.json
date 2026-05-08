@@ -1,12 +1,20 @@
 {
-  "name": "web-component-template",
-  "private": true,
-  "version": "1.0.0",
+  "name": "@ayo-run/status-indicator",
+  "version": "0.0.1-alpha",
+  "type": "module",
   "description": "Project scaffolding for a new web component",
   "license": "ISC",
   "author": "Ayo Ayco",
-  "type": "commonjs",
-  "main": "index.js",
+  "main": "./dist/assets/index.js",
+  "exports": {
+    ".": "./dist/assets/index.js"
+  },
+  "files": [
+    "package.json",
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "echo \"Warning: no test specified\"",
     "build": "vite build",
