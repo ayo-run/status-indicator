@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/ayo-run/status-indicator.git"
   },
+  "homepage": "https://status-indicator.webcomponent.io",
   "module": "./dist/status-indicator.js",
   "exports": {
     ".": {
