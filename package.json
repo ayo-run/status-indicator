@@ -1,15 +1,13 @@
 {
   "name": "@ayo-run/status-indicator",
-  "version": "0.0.1",
+  "version": "0.0.3-alpha",
   "type": "module",
   "description": "Project scaffolding for a new web component",
   "license": "ISC",
   "author": "Ayo Ayco",
   "module": "./dist/status-indicator.js",
   "exports": {
-    ".": {
-      "import": "./dist/status-indicator.js"
-    }
+    ".": "./dist/status-indicator.js"
   },
   "files": [
     "dist",
@@ -20,10 +18,12 @@
   "scripts": {
     "test": "echo \"Warning: no test specified\"",
     "build": "vite build",
+    "build:lib": "vite build --config vite-lib.config.ts",
     "dev": "vite",
     "prepare": "husky"
   },
   "devDependencies": {
+    "@types/node": "^25.6.1",
     "eslint": "^10.3.0",
     "husky": "^9.1.7",
     "vite": "^8.0.11"
