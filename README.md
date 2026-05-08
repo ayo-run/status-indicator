@@ -1,6 +1,8 @@
-# Web Component Template
+# &lt;status-indicator&gt; web component
 
-A project scaffold for a new web component.
+Circles with colors. That's it. That's the component.
+
+![screenshot](./screenshot.png)
 
 ---
 
