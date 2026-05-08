@@ -4,7 +4,7 @@ Circles with colors. That's it. That's the component.
 
 ## Quick Start
 
-Copy the following on your HTML page:
+Copy the following to your HTML page:
 
 ```html
 <script type="module" src="https://esm.sh/@ayo-run/status-indicator"></script>
