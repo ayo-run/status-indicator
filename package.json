@@ -5,15 +5,17 @@
   "description": "Project scaffolding for a new web component",
   "license": "ISC",
   "author": "Ayo Ayco",
-  "main": "./dist/assets/index.js",
+  "module": "./dist/status-indicator.js",
   "exports": {
-    ".": "./dist/assets/index.js"
+    ".": {
+      "import": "./dist/status-indicator.js"
+    }
   },
   "files": [
-    "package.json",
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "screenshot.png"
   ],
   "scripts": {
     "test": "echo \"Warning: no test specified\"",
