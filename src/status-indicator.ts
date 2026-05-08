@@ -7,14 +7,24 @@ class StatusIndicator extends WebComponent {
 
     static props = {
         status: 'default',
+        pulse: false
     }
 
     #indicatorColor: any = {
-        default: [216, 226, 233],
-        active: [0, 149, 255],
-        positive: [75, 210, 143],
-        intermediary: [255, 170, 0],
-        negative: [255, 77, 77]
+        default: '216, 226, 233',
+        active: '0, 149, 255',
+        positive: '75, 210, 143',
+        intermediary: '255, 170, 0',
+        negative: '255, 77, 77'
+    }
+
+    #pulseAnimationCSSRules = {
+        animationName: 'pulse',
+        animationDuration: '2s',
+        animationTimingFunction: 'ease-in-out',
+        animationIterationCount: 'infinite',
+        animationDelay: '0',
+        animationFillMode: 'none'
     }
 
     get template(): any {
@@ -26,13 +36,23 @@ class StatusIndicator extends WebComponent {
                 width: '10px',
                 height: '10px',
                 backgroundColor: `rgba(${this.#indicatorColor[this.props.status]})`,
-                marginRight: '0.05rem'
-            }}
-            ></div>
-            <span class="status-indicator-label">
-                <slot></slot>
-            </span>
-        `
+                marginRight: '0.05rem',
+                ...(this.props.pulse ? this.#pulseAnimationCSSRules : [])
+            }}> </div>
+
+            <span class="status-indicator-label"><slot></slot></span>
+
+            ${
+            /** if pulse is set, add animation keyframes */
+            this.props.pulse && html`
+                <style>
+                @keyframes pulse {
+                    0% { box-shadow: 0 0 0 0 rgba(${this.#indicatorColor[this.props.status]}, 0.5);}
+                    70% { box-shadow: 0 0 0 10px rgba(${this.#indicatorColor[this.props.status]}, 0); }
+                    100% { box-shadow: 0 0 0 0 rgba(${this.#indicatorColor[this.props.status]}, 0); }
+                }
+                </style>`
+            }`
     }
 }
 

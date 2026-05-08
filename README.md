@@ -25,14 +25,26 @@ pnpm add @ayo-run/status-indicator
 
 ## Usage
 
-Set the `status` property of the `status-indicator` component to any of the following: positive, negative, active, intermediary.
+### 1. `status` property
+
+To indicate the status that determines the color of the circle, set the `status` property of the `status-indicator` component to any of the following: `positive`, `negative`, `active`, or `intermediary`.
 
 ```html
 <status-indicator status="positive"> All systems operational </status-indicator>
 <status-indicator status="negative"> Something's wrong </status-indicator>
 <status-indicator status="active"> It's just fine; carry on </status-indicator>
-<status-indicator> Nothing matters </status-indicator>
 <status-indicator status="intermediary"> Slow down... </status-indicator>
+<status-indicator> Nothing matters </status-indicator>
+```
+
+### `pulse` animation
+
+You can add the `pulse` attribute to make the circle... pulse
+
+```html
+<status-indicator status="positive" pulse>
+  All systems operational
+</status-indicator>
 ```
 
 ### Result
