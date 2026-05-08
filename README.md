@@ -2,14 +2,13 @@
 
 Circles with colors. That's it. That's the component.
 
-## Quick usage via CDN
+## Quick Start
 
-Inside your HTML `<head>`:
+Copy the following on your HTML page:
 
 ```html
-<head>
-  <script type="module" src="https://esm.sh/@ayo-run/status-indicator"></script>
-</head>
+<script type="module" src="https://esm.sh/@ayo-run/status-indicator"></script>
+<status-indicator status="positive">All systems operational</status-indicator>
 ```
 
 ## Installation
