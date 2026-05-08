@@ -1,6 +1,6 @@
 {
   "name": "@ayo-run/status-indicator",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "type": "module",
   "description": "Project scaffolding for a new web component",
   "license": "MIT",
