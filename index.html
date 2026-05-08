@@ -5,26 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Component Demo</title>
     <script type="module" src="./src/status-indicator.ts"></script>
+    <style>
+        main {
+            padding: 1em;
+        }
+        footer {
+
+        }
+    </style>
 </head>
 <body>
-    <status-indicator status="positive">
-        All systems operational
-    </status-indicator>
-    <br />
-    <status-indicator status="negative">
-        Something's wrong
-    </status-indicator>
-    <br />
-    <status-indicator status="active">
-        It's just fine; carry on
-    </status-indicator>
-    <br />
-    <status-indicator>
-        Nothing matters
-    </status-indicator>
-    <br />
-    <status-indicator status="intermediary">
-        Slow down...
-    </status-indicator>
+    <header>
+        <h1>&lt;status-indicator&gt;</h1>
+        <p>
+            <a href="https://git.ayo.run/ayo/status-indicator">Ayo's Forge</a> &middot;
+            <a href="https://github.com/ayo-run/status-indicator">GitHub</a> &middot;
+            <a href="https://git.sr.ht/~ayoayco/status-indicator">SourceHut</a>
+        </p>
+    </header>
+    <main>
+        <status-indicator status="positive">
+            All systems operational
+        </status-indicator>
+        <br />
+        <status-indicator status="negative">
+            Something's wrong
+        </status-indicator>
+        <br />
+        <status-indicator status="active">
+            It's just fine; carry on
+        </status-indicator>
+        <br />
+        <status-indicator>
+            Nothing matters
+        </status-indicator>
+        <br />
+        <status-indicator status="intermediary">
+            Slow down...
+        </status-indicator>
+    </main>
+    <footer>
+        <hr />
+        <p>
+            Just keep building.
+            <br>
+            A web component by <a href="">Ayo</a>.
+        </p>
+    </footer>
 </body>
 </html>
