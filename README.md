@@ -8,7 +8,10 @@ Copy the following to your HTML page:
 
 ```html
 <script type="module" src="https://esm.sh/@ayo-run/status-indicator"></script>
-<status-indicator status="positive">All systems operational</status-indicator>
+
+<status-indicator status="positive" pulse>
+  All systems operational
+</status-indicator>
 ```
 
 ## Installation via NPM
