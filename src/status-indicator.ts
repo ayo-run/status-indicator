@@ -35,8 +35,8 @@ class StatusIndicator extends WebComponent {
                 display: 'inline-block',
                 borderRadius: '50%',
                 cursor: 'pointer',
-                width: '10px',
-                height: '10px',
+                width: '0.5rem',
+                height: '0.5rem',
                 backgroundColor: `rgb(${statusColor})`,
                 marginRight: '0.05rem',
                 ...(this.props.pulse ? this.#pulseAnimationCSSRules : [])
