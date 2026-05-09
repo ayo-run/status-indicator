@@ -1,6 +1,6 @@
 # &lt;status-indicator&gt; web component
 
-Circles with colors. That's it. That's the component.
+Colored circles that can pulse. That's it. That's the component.
 
 ## Quick Start using a CDN
 
