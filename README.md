@@ -9,7 +9,7 @@ Copy the following to your HTML page:
 ```html
 <script type="module" src="https://esm.sh/@ayo-run/status-indicator"></script>
 
-<status-indicator status="positive" pulse>
+<status-indicator pulse status="positive">
   All systems operational
 </status-indicator>
 ```
@@ -28,9 +28,9 @@ pnpm add @ayo-run/status-indicator
 
 ## Usage
 
-### 1. `status` property
+### 1. `status` attribute
 
-To indicate the status that determines the color of the circle, set the `status` property of the `status-indicator` component to any of the following: `positive`, `negative`, `active`, or `intermediary`.
+To indicate the status that determines the color of the circle, set the `status` attribute of the `status-indicator` component to any of the following values: `positive`, `negative`, `active`, or `intermediary`.
 
 ```html
 <status-indicator status="positive"> All systems operational </status-indicator>
@@ -45,7 +45,7 @@ To indicate the status that determines the color of the circle, set the `status`
 You can add the `pulse` attribute to make the circle... pulse
 
 ```html
-<status-indicator status="positive" pulse>
+<status-indicator pulse status="positive">
   All systems operational
 </status-indicator>
 ```
