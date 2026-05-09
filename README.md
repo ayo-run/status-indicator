@@ -1,4 +1,4 @@
-# &lt;status-indicator&gt; web component
+# &lt;status-indicator&gt;
 
 Colored circles that can pulse. That's it. That's the component.
 
