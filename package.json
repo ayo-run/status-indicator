@@ -2,7 +2,7 @@
   "name": "@ayo-run/status-indicator",
   "version": "1.1.0",
   "type": "module",
-  "description": "Project scaffolding for a new web component",
+  "description": "Circles with color that can pulse to indicate status",
   "license": "MIT",
   "author": "Ayo Ayco",
   "repository": {
