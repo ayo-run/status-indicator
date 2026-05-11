@@ -1,5 +1,7 @@
 import { WebComponent, html } from 'web-component-base'
 
+type StatusType = 'default' | 'active' | 'positive' | 'intermediary' | 'negative'
+
 class StatusIndicator extends WebComponent {
     static shadowRootInit: ShadowRootInit = {
         mode: 'closed'
@@ -10,7 +12,7 @@ class StatusIndicator extends WebComponent {
         pulse: false
     }
 
-    #indicatorColor: any = {
+    #indicatorColor: Record<StatusType, string> = {
         default: '216, 226, 233',
         active: '0, 149, 255',
         positive: '75, 210, 143',
@@ -18,7 +20,7 @@ class StatusIndicator extends WebComponent {
         negative: '255, 77, 77'
     }
 
-    #pulseAnimationCSSRules = {
+    #pulseAnimationCSSRules: Partial<CSSStyleDeclaration> = {
         animationName: 'pulse',
         animationDuration: '2s',
         animationTimingFunction: 'ease-in-out',
