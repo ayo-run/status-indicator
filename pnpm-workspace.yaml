@@ -1,2 +1,5 @@
+packages:
+  - "site"
+  - "lib"
 allowBuilds:
   web-component-base: false

@@ -43,8 +43,8 @@ class StatusIndicator extends WebComponent {
                 marginRight: '0.05rem',
                 ...(this.props.pulse ? this.#pulseAnimationCSSRules : [])
             }}> </div>
-
-            <span class="status-indicator-label"><slot></slot></span>
+            Weeeee
+            <span class="status-indicator-label">Wooooo <slot></slot></span>
 
             ${
             /** if pulse is set, add animation keyframes */

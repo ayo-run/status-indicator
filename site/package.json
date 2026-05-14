@@ -1,0 +1,18 @@
+{
+  "name": "site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "demo site for the status-indicator web component",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [
+    "web",
+    "component"
+  ],
+  "author": "Ayo Ayco",
+  "license": "MIT",
+  "dependencies": {
+    "@ayo-run/status-indicator": "*"
+  }
+}
