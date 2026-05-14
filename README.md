@@ -86,7 +86,7 @@ You can add the `pulse` attribute to make the circle... pulse
 
 ## Result
 
-![screenshot](./screenshot.png)
+![screenshot](https://raw.githubusercontent.com/ayo-run/status-indicator/refs/heads/main/screenshot.png)
 
 ---
 

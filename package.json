@@ -20,11 +20,9 @@
     }
   },
   "files": [
-    "src",
     "dist",
     "README.md",
-    "LICENSE",
-    "screenshot.png"
+    "LICENSE"
   ],
   "scripts": {
     "test": "echo \"Warning: no test specified\"",
