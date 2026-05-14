@@ -1,6 +1,6 @@
 {
   "name": "@ayo-run/status-indicator",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "type": "module",
   "description": "Circles with color that can pulse to indicate status",
   "license": "MIT",
