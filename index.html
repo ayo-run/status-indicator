@@ -35,6 +35,24 @@
         status-indicator {
             font-family: 'Courier New', Courier, monospace;
         }
+
+        nav, code {
+            max-width: 500px;
+
+            @media(max-width:440px) {
+                max-width: 300px;
+            }
+        }
+
+        code {
+            padding: 1rem;
+            margin: 1rem 0;
+
+            pre {
+                margin: 0;
+                padding: 0.25rem 0;
+            }
+        }
         </style>
 </head>
 <body>
@@ -48,26 +66,41 @@
         <hr />
     </header>
     <main>
-        <p>Colored circles that can pulse</p>
-        <status-indicator status="positive" pulse>
-            All systems operational
-        </status-indicator>
-        <br />
-        <status-indicator status="negative" pulse>
-            Something's wrong
-        </status-indicator>
-        <br />
-        <status-indicator status="active">
-            It's just fine; carry on
-        </status-indicator>
-        <br />
-        <status-indicator>
-            Nothing matters
-        </status-indicator>
-        <br />
-        <status-indicator status="intermediary">
-            Slow down...
-        </status-indicator>
+            <section>
+                <p>Colored circles that can pulse</p>
+                <status-indicator status="positive" pulse>
+                    All systems operational
+                </status-indicator>
+                <br />
+                <status-indicator status="negative" pulse>
+                    Something's wrong
+                </status-indicator>
+                <br />
+                <status-indicator status="active">
+                    It's just fine; carry on
+                </status-indicator>
+                <br />
+                <status-indicator>
+                    Nothing matters
+                </status-indicator>
+                <br />
+                <status-indicator status="intermediary">
+                    Slow down...
+                </status-indicator>
+            </section>
+            <section>
+                <h3>Quick Start</h3>
+                <code><pre>
+&lt;script type="module" src="https://esm.sh/@ayo-run/status-indicator"&gt;&lt;/script&gt;
+
+&lt;status-indicator pulse status="positive"&gt;
+All systems operational
+&lt;/status-indicator&gt;
+                </pre></code>
+                <p>More on the
+                    <a href="https://git.ayo.run/ayo/status-indicator#readme">README</a>
+                </p>
+            </section>
     </main>
     <footer>
         <hr />
