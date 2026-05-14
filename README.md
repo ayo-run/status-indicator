@@ -16,14 +16,14 @@ Copy the following to your HTML page:
 
 ## Installation via NPM
 
-If you want to install the library as a node module, you can install the [published package](https://npmx.dev/@ayo-run/status-indicator) via NPM:
+If you want to install the library as a node module, you can install the [published package](https://npmx.dev/@ayo-run/status-indicator) and the [base class](https://webcomponent.io) via NPM:
 
 ```bash
 # using npm
-npm install @ayo-run/status-indicator
+npm install web-component-base @ayo-run/status-indicator
 
 # or using pnpm
-pnpm add @ayo-run/status-indicator
+pnpm add web-component-base @ayo-run/status-indicator
 ```
 
 ## Usage
