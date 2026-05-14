@@ -16,6 +16,9 @@ Copy the following to your HTML page:
 
 See example on CodePen: https://codepen.io/ayo-run/pen/RNorXrK
 
+> [!NOTE]
+> In this example, `esm.sh` bundles the base class together with the component. For most use cases, that is good enough but, still, "it depends". Copying the code will work just fine, but it woudn't hurt to read around about the trade-offs how bundling affects your application.
+
 ## Installation via NPM
 
 If you want to install the library as a node module, you can install the [published package](https://npmx.dev/@ayo-run/status-indicator) and the [base class](https://webcomponent.io) via NPM:
@@ -54,7 +57,8 @@ maps](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/scrip
 </html>
 ```
 
-Using import maps can also work with the CDN: https://codepen.io/ayo-run/pen/emBdQRg
+> [!NOTE]
+> Using import maps can also work with the CDN: https://codepen.io/ayo-run/pen/emBdQRg
 
 ## Usage: Attributes
 
