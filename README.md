@@ -14,6 +14,8 @@ Copy the following to your HTML page:
 </status-indicator>
 ```
 
+See example on CodePen: https://codepen.io/ayo-run/pen/RNorXrK
+
 ## Installation via NPM
 
 If you want to install the library as a node module, you can install the [published package](https://npmx.dev/@ayo-run/status-indicator) and the [base class](https://webcomponent.io) via NPM:
@@ -26,7 +28,7 @@ npm install web-component-base @ayo-run/status-indicator
 pnpm add web-component-base @ayo-run/status-indicator
 ```
 
-## Usage
+## Usage: Imports
 
 Without a bundler that resolves `node_module` imports for you, you can use [import
 maps](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap):
@@ -52,7 +54,9 @@ maps](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/scrip
 </html>
 ```
 
-## Attributes
+Using import maps can also work with the CDN: https://codepen.io/ayo-run/pen/emBdQRg
+
+## Usage: Attributes
 
 ### 1. `status` attribute
 
