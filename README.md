@@ -28,6 +28,32 @@ pnpm add web-component-base @ayo-run/status-indicator
 
 ## Usage
 
+Without a bundler that resolves `node_module` imports for you, you can use [import
+maps](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap):
+
+```html
+<html>
+  <head>
+    <script type="importmap">
+      {
+        "imports": {
+          "web-component-base": "./node_modules/web-component-base/dist/index.js",
+          "status-indicator": "./node_modules/@ayo-run/status-indicator/dist/status-indicator.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import StatusIndicator from "status-indicator";
+    </script>
+  </head>
+  <body>
+    <!-- you can use the status-indicator component now -->
+  </body>
+</html>
+```
+
+## Attributes
+
 ### 1. `status` attribute
 
 To indicate the status that determines the color of the circle, set the `status` attribute of the `status-indicator` component to any of the following values: `positive`, `negative`, `active`, or `intermediary`.
