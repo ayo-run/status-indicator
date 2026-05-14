@@ -30,6 +30,7 @@ class StatusIndicator extends WebComponent {
     }
 
     get template(): any {
+        // @ts-ignore: Needs fixing on the base class
         const statusColor = this.#indicatorColor[this.props.status]
 
         return html`

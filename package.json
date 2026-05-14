@@ -11,6 +11,7 @@
   },
   "homepage": "https://status-indicator.webcomponent.io",
   "module": "./dist/status-indicator.js",
+  "types": "./dist/status-indicator.d.ts",
   "exports": {
     ".": {
       "default": "./dist/status-indicator.js",
@@ -19,6 +20,7 @@
     }
   },
   "files": [
+    "src",
     "dist",
     "README.md",
     "LICENSE",
@@ -35,8 +37,8 @@
     "@types/node": "^25.6.2",
     "eslint": "^10.3.0",
     "husky": "^9.1.7",
-    "unplugin-dts": "^1.0.0",
-    "vite": "^8.0.11"
+    "vite": "^8.0.11",
+    "vite-plugin-dts": "^5.0.0"
   },
   "peerDependencies": {
     "web-component-base": "^4.1.2"

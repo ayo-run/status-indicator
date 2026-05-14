@@ -21,12 +21,12 @@ importers:
       husky:
         specifier: ^9.1.7
         version: 9.1.7
-      unplugin-dts:
-        specifier: ^1.0.0
-        version: 1.0.0(typescript@6.0.3)(vite@8.0.11(@types/node@25.6.2))
       vite:
         specifier: ^8.0.11
         version: 8.0.11(@types/node@25.6.2)
+      vite-plugin-dts:
+        specifier: ^5.0.0
+        version: 5.0.0(typescript@6.0.3)(vite@8.0.11(@types/node@25.6.2))
 
 packages:
 
@@ -665,6 +665,20 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
+  vite-plugin-dts@5.0.0:
+    resolution: {integrity: sha512-VLNAUttBq7pLxxL/m/ztjd5zj5yiviiC7ijfPFVLK5c45FLcibvieBsdjSka3a4ag1qdrAF9K3OysH4/lW+rPQ==}
+    peerDependencies:
+      '@microsoft/api-extractor': '>=7'
+      rollup: '>=3'
+      vite: '>=3'
+    peerDependenciesMeta:
+      '@microsoft/api-extractor':
+        optional: true
+      rollup:
+        optional: true
+      vite:
+        optional: true
+
   vite@8.0.11:
     resolution: {integrity: sha512-Jz1mxtUBR5xTT65VOdJZUUeoyLtqljmFkiUXhPTLZka3RDc9vpi/xXkyrnsdRcm2lIi3l3GPMnAidTsEGIj3Ow==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -1285,6 +1299,20 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  vite-plugin-dts@5.0.0(typescript@6.0.3)(vite@8.0.11(@types/node@25.6.2)):
+    dependencies:
+      unplugin-dts: 1.0.0(typescript@6.0.3)(vite@8.0.11(@types/node@25.6.2))
+    optionalDependencies:
+      vite: 8.0.11(@types/node@25.6.2)
+    transitivePeerDependencies:
+      - '@rspack/core'
+      - '@vue/language-core'
+      - esbuild
+      - rolldown
+      - supports-color
+      - typescript
+      - webpack
 
   vite@8.0.11(@types/node@25.6.2):
     dependencies:
