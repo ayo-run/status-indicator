@@ -7,7 +7,7 @@ Colored circles that can pulse. That's it. That's the component.
 Copy the following to your HTML page:
 
 ```html
-<script type="module" src="https://esm.sh/@ayo-run/status-indicator"></script>
+<script type="module" src="https://esm.sh/@ayo-run/status-indicator@2.1.2/es2022/status-indicator.mjs"></script>
 
 <status-indicator pulse status="positive">
   All systems operational
@@ -15,9 +15,6 @@ Copy the following to your HTML page:
 ```
 
 See example on CodePen: https://codepen.io/ayo-run/pen/RNorXrK
-
-> [!NOTE]
-> In this example, `esm.sh` bundles the base class together with the component. For most use cases, that is good enough but, still, "it depends". Copying the code will work just fine, but it woudn't hurt to read around about the trade-offs how bundling affects your application.
 
 ## Installation via NPM
 
