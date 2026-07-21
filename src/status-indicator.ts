@@ -1,18 +1,23 @@
 import { WebComponent, html } from 'web-component-base'
 
-type StatusType = 'default' | 'active' | 'positive' | 'intermediary' | 'negative'
+type Status = 'default' | 'active' | 'positive' | 'intermediary' | 'negative'
 
-class StatusIndicator extends WebComponent {
+type StatusProps = {
+    status: Status,
+    pulse: boolean
+}
+
+class StatusIndicator extends WebComponent<StatusProps> {
     static shadowRootInit: ShadowRootInit = {
         mode: 'closed'
     }
 
-    static props = {
+    static props: StatusProps = {
         status: 'default',
         pulse: false
     }
 
-    #indicatorColor: Record<StatusType, string> = {
+    #indicatorColor: Record<Status, string> = {
         default: '216, 226, 233',
         active: '0, 149, 255',
         positive: '75, 210, 143',
@@ -30,7 +35,6 @@ class StatusIndicator extends WebComponent {
     }
 
     get template(): any {
-        // @ts-ignore: Needs fixing on the base class
         const statusColor = this.#indicatorColor[this.props.status]
 
         return html`
