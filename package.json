@@ -7,7 +7,7 @@
   "author": "Ayo Ayco",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ayo-run/status-indicator.git"
+    "url": "git+https://git.ayo.run/ayo/status-indicator.git"
   },
   "homepage": "https://status-indicator.webcomponent.io",
   "module": "./dist/status-indicator.js",
