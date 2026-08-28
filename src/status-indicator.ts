@@ -17,10 +17,9 @@ class StatusIndicator extends WebComponent<StatusProps> {
         pulse: false
     }
 
-    // Both props reflect to attributes, so the colour and the pulse animation
+    // Both props reflect to attributes, so the color and the pulse animation
     // are driven entirely from CSS via `:host([status])` / `:host([pulse])` —
-    // the template stays static and never has to re-render on a prop change.
-    static styles = /* css */ `
+    static styles = `
         :host {
             --status-color: 216, 226, 233;
         }
