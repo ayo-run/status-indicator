@@ -7,7 +7,7 @@ Colored circles that can pulse. That's it. That's the component.
 Copy the following to your HTML page:
 
 ```html
-<script type="module" src="https://esm.sh/@ayo-run/status-indicator@2.1.2/es2022/status-indicator.mjs"></script>
+<script type="module" src="https://esm.sh/@ayo-run/status-indicator@3.2.0/es2022/status-indicator.mjs"></script>
 
 <status-indicator pulse status="positive">
   All systems operational
