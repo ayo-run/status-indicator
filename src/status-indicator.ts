@@ -17,53 +17,43 @@ class StatusIndicator extends WebComponent<StatusProps> {
         pulse: false
     }
 
-    #indicatorColor: Record<Status, string> = {
-        default: '216, 226, 233',
-        active: '0, 149, 255',
-        positive: '75, 210, 143',
-        intermediary: '255, 170, 0',
-        negative: '255, 77, 77'
-    }
+    // Both props reflect to attributes, so the colour and the pulse animation
+    // are driven entirely from CSS via `:host([status])` / `:host([pulse])` —
+    // the template stays static and never has to re-render on a prop change.
+    static styles = /* css */ `
+        :host {
+            --status-color: 216, 226, 233;
+        }
+        :host([status="active"]) { --status-color: 0, 149, 255; }
+        :host([status="positive"]) { --status-color: 75, 210, 143; }
+        :host([status="intermediary"]) { --status-color: 255, 170, 0; }
+        :host([status="negative"]) { --status-color: 255, 77, 77; }
 
-    #pulseAnimationCSSRules: Partial<CSSStyleDeclaration> = {
-        animationName: 'pulse',
-        animationDuration: '2s',
-        animationTimingFunction: 'ease-in-out',
-        animationIterationCount: 'infinite',
-        animationDelay: '0',
-        animationFillMode: 'none'
-    }
+        .status-indicator-icon {
+            display: inline-block;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: rgb(var(--status-color));
+            margin-right: 0.05rem;
+        }
+
+        :host([pulse]) .status-indicator-icon {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(var(--status-color), 0.5); }
+            70% { box-shadow: 0 0 0 10px rgba(var(--status-color), 0); }
+            100% { box-shadow: 0 0 0 0 rgba(var(--status-color), 0); }
+        }
+    `
 
     get template(): any {
-        const statusColor = this.#indicatorColor[this.props.status]
-
         return html`
-            <div class="status-indicator-icon" style=${{
-                display: 'inline-block',
-                borderRadius: '50%',
-                cursor: 'pointer',
-                width: '0.5rem',
-                height: '0.5rem',
-                backgroundColor: `rgb(${statusColor})`,
-                marginRight: '0.05rem',
-                ...(this.props.pulse ? this.#pulseAnimationCSSRules : [])
-            }}> </div>
-
-            <span class="status-indicator-label"><slot></slot></span>
-
-            ${
-            /** if pulse is set, add animation keyframes */
-            this.props.pulse ? html`
-                <style>
-                @keyframes pulse {
-                    0% { box-shadow: 0 0 0 0 rgba(${statusColor}, 0.5);}
-                    70% { box-shadow: 0 0 0 10px rgba(${statusColor}, 0); }
-                    100% { box-shadow: 0 0 0 0 rgba(${statusColor}, 0); }
-                }
-                </style>`
-                :
-                ''
-            }`
+            <div class="status-indicator-icon"> </div>
+            <span class="status-indicator-label"><slot></slot></span>`
     }
 }
 
