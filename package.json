@@ -28,9 +28,10 @@
   "scripts": {
     "test": "echo \"Warning: no test specified\"",
     "build": "vite build && cem analyze",
-    "build:lib": "vite build --config vite-lib.config.ts && cem analyze",
+    "build:lib": "vite build --config vite-lib.config.ts",
     "dev": "vite",
-    "prepack": "npm run build:lib",
+    "analyze": "cem analyze",
+    "prepack": "npm run build:lib && npm run analyze",
     "prepare": "husky"
   },
   "devDependencies": {
