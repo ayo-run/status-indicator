@@ -30,6 +30,7 @@
     "build": "vite build && cem analyze",
     "build:lib": "vite build --config vite-lib.config.ts && cem analyze",
     "dev": "vite",
+    "prepack": "npm run build:lib",
     "prepare": "husky"
   },
   "devDependencies": {
